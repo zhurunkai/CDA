@@ -9,11 +9,11 @@ The model is developed using PyTorch with environment requirements provided in `
 We experiment with three datasets: MIT-States, UT-Zappos, and C-GQA.
 
 Please download datasets to the folder `data` by running the following command.
-
-If you already have setup the datasets, you can use symlink and ensure the following paths exist: `data/<datasets> where <datasets> = {'mit-states', 'ut-zappos', 'cgqa'}.`
 ```
 sh utils/download_datasets.sh
 ```
+If you already have setup the datasets, you can use symlink and ensure the following paths exist: `data/<datasets> where <datasets> = {'mit-states', 'ut-zappos', 'cgqa'}.`
+
 
 ## Training
 
