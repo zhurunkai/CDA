@@ -8,7 +8,7 @@ The model is developed using PyTorch with environment requirements provided in `
 ## Dataset Preparations
 We experiment with three datasets: MIT-States, UT-Zappos, and C-GQA.
 
-Please create a new root folder `DATA_ROOT` for saving the datasets, and download data using the commands in the following script.
+Please download datasets to the folder `data` by running the following command.
 
 ```
 sh download_datasets.sh
@@ -16,7 +16,7 @@ sh download_datasets.sh
 
 ## Training
 
-Please replace `<dataset>` with `{mit-states, ut-zappos, cgqa}`. The best hyperparameters are included in the corresponding `yml` file.
+Please replace `<dataset>` with `{mit-states, ut-zappos, cgqa}`. The best hyperparameters are included in the corresponding `.yml` file.
 
 ```
 python train.py --config configs/<dataset>.yml
@@ -24,7 +24,7 @@ python train.py --config configs/<dataset>.yml
 
 
 ## Evaluation
-We use `<ckpt_location>` to save the best model w.r.t the validation set. Please specify it from `configs/` before evaluating the model. 
+We use `<ckpt_location>` to save the best model w.r.t the validation set. Please specify it from `logs/` before evaluating the model. 
 ```
 python evaluate.py --config configs/<dataset>.yml --eval_load_model <ckpt_location>
 ```
