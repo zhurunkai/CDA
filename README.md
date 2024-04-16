@@ -12,7 +12,7 @@ Please download datasets to the folder `data` by running the following command.
 ```
 sh utils/download_datasets.sh
 ```
-If you already have setup the datasets, you can use symlink and ensure the following paths exist: `data/<datasets> where <datasets> = {'mit-states', 'ut-zappos', 'cgqa'}.`
+If you already have setup the datasets, you can use symlink and ensure the following paths exist: `data/<dataset> where <dataset> = {'mit-states', 'ut-zappos', 'cgqa'}.`
 
 
 ## Training
