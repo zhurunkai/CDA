@@ -8,8 +8,6 @@ The model is developed using PyTorch with environment requirements provided in `
 ## Dataset Preparations
 We experiment with three datasets: MIT-States, UT-Zappos, and C-GQA.
 
-Please create a new root folder `DATA_ROOT` for saving the datasets, and download data using the commands in the following script.
-
 Please create a new root folder `data` for saving the datasets, and download data using the commands in the following script.
 
 If you already have setup the datasets, you can use symlink and ensure the following paths exist: `data/<datasets> where <datasets> = {'mit-states', 'ut-zappos', 'cgqa'}.`
