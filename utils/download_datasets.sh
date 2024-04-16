@@ -10,7 +10,7 @@ CURRENT_DIR=$(pwd)
 #FOLDER=$1
 #
 #mkdir $FOLDER
-$FOLDER = './DATA_ROOT'
+$FOLDER = './data'
 
 # Download everything
 wget --show-progress -O $FOLDER/attr-ops-data.tar.gz https://utexas.box.com/shared/static/h7ckk2gx5ykw53h8o641no8rdyi7185g.gz

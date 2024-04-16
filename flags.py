@@ -1,6 +1,6 @@
 import argparse
 
-DATA_FOLDER = "./DATA_ROOT"
+DATA_FOLDER = "./data"
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument(
