@@ -80,7 +80,7 @@ In our paper, we develop a series of model variants for evaluating the effective
   ```
   python train.py --config configs/<dataset>.yml --l_adapter_layers <l_adapter_layers_num> --v_adapter_layers <v_adapter_layers_num>
   ```
-  The values of `<l_adapter_layers_num>` can vary from 0 to 24.
+  The values of `<l_adapter_layers_num>` can vary from 0 to 12, The values of `<v_adapter_layers_num>` can vary from 0 to 24.
 
   
 
