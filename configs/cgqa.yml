@@ -8,7 +8,6 @@ lr: 1e-5
 l_adapter_layers: 3
 v_adapter_layers: 3
 graph_init: None
-save_model: True
 save_path: ./logs/cgqa
 use_soft_embeddings: None
 train_soft_embeddings: None

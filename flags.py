@@ -10,6 +10,9 @@ parser.add_argument(
     "--dataset", help="name of the dataset", type=str, default="mit-states"
 )
 parser.add_argument(
+    "--config", type=str, default="configs/mit-states.yml"
+)
+parser.add_argument(
     "--clip_model", help="clip model type", type=str, default="ViT-L/14"
 )
 parser.add_argument(
@@ -84,7 +87,6 @@ parser.add_argument("--v_adapter_context", default="True", type=str)
 parser.add_argument("--l_adapter_context", default="True", type=str)
 parser.add_argument("--has_v_adapter", default="True", type=str)
 parser.add_argument("--has_l_adapter", default="True", type=str)
-parser.add_argument("--l_adapter_location", default="True", type=str)
 parser.add_argument("--v_adapter_location", default="out", type=str)
 parser.add_argument("--l_adapter_location", default="in", type=str)
 parser.add_argument(

@@ -293,6 +293,8 @@ class LAdapter(nn.Module):
         if not config.graph_init:
             self.train_adj = self.adj_from_pairs(self.dataset.train_pairs)
             self.all_adj = self.adj_from_pairs(self.dataset.pairs)
+            if not os.path.exists(f"{DATA_FOLDER}/graph_init"):
+                os.makedirs(f"{DATA_FOLDER}/graph_init")
             torch.save(
                 {"all_adj": self.all_adj, "train_adj": self.train_adj},
                 f"{DATA_FOLDER}/graph_init/{config.dataset}.t7",
@@ -404,13 +406,12 @@ class CDAClip(nn.Module):
             dataset,
         )
         self.img_dropout = nn.Dropout(p=0.5)
-        if config.multi_task:
-            self.attr_transform = nn.Linear(vision_embed_dim, vision_embed_dim)
-            nn.init.xavier_uniform_(self.attr_transform.weight)
-            nn.init.constant_(self.attr_transform.bias, 0.0)
-            self.obj_transform = nn.Linear(vision_embed_dim, vision_embed_dim)
-            nn.init.xavier_uniform_(self.obj_transform.weight)
-            nn.init.constant_(self.obj_transform.bias, 0.0)
+        self.attr_transform = nn.Linear(vision_embed_dim, vision_embed_dim)
+        nn.init.xavier_uniform_(self.attr_transform.weight)
+        nn.init.constant_(self.attr_transform.bias, 0.0)
+        self.obj_transform = nn.Linear(vision_embed_dim, vision_embed_dim)
+        nn.init.xavier_uniform_(self.obj_transform.weight)
+        nn.init.constant_(self.obj_transform.bias, 0.0)
         self.automatic_weighted_loss = AutomaticWeightedLoss(3)
 
     def forward(self, image, text, attr_img, obj_img):

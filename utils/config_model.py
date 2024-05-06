@@ -52,7 +52,7 @@ def get_model_and_optimizer(config, train_dataset):
                 "weight_decay": config.wd,
             }
         )
-    if config.adapter_layers != 0:
+    if config.l_adapter_layers != 0:
         parameter_groups.append(
             {"params": graph_parameters, "lr": config.lr, "weight_decay": config.wd}
         )
